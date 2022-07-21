@@ -49,18 +49,7 @@ dependencies {
     implementation 'com.github.rtugeek:colorseekbar:2.0.3'
 }
 
-afterEvaluate {
-    publishing {
-        publications {
-            release(MavenPublication) {
-                from components.release
-                groupId = "com.pearldrift"
-                artifactId = "PhotoEditor"
-                version = "1.0.1"
-            }
-        }
-    }
-}
+
 
 repositories {
     mavenCentral()
