@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginHorizontal="0dp"
+    android:layout_marginVertical="0dp"
+    android:paddingHorizontal="0dp"
+    android:paddingVertical="0dp"
+    android:background="@color/transparent_black"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/add_text_done_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/margin_20dp"
+        android:background="@drawable/background_border"
+        android:padding="@dimen/padding_10dp"
+        android:text="@string/iamutkarshtiwari_github_io_ananas_done"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_16sp" />
+
+    <EditText
+        android:id="@+id/add_text_edit_text"
+        style="@style/edit_text_style"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/add_text_color_picker_recycler_view"
+        android:layout_below="@+id/add_text_done_tv"
+        android:background="@null"
+        android:gravity="center"
+        android:inputType="textMultiLine"
+        android:textSize="@dimen/text_size_40sp" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/margin_20dp"
+        android:layout_height="wrap_content">
+
+        <com.rtugeek.android.colorseekbar.ColorSeekBar
+            android:id="@+id/colorSeekBar"
+            android:layout_width="match_parent"
+            app:colorSeekBarShowThumb="true"
+            app:colorSeekBarBarHeight="16dp"
+            android:layout_height="wrap_content" />
+
+
+
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/add_text_color_picker_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:background="@android:color/white"
+        tools:listitem="@layout/color_picker_item_list" />
+
+</RelativeLayout>
